@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
-import audioSrc from '../music/S_HW_Touch.mp3'
+import audioSrc from './music/S_HW_Touch.mp3'
 
 const colors = {
   "qizil": "red",

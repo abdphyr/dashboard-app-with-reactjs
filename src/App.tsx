@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './app.css';
-import Navbar from './components/Navbar';
+import Navbar from './Navbar';
 
 const App: FC = () => {
   return (
