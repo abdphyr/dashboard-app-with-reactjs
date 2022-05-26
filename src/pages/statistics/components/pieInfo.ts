@@ -13,7 +13,6 @@ export const pieChartData  = {
     },
   ],
 };
-
 const pieChartPlugins = {
     datalabels: {
       display: true,
@@ -26,9 +25,6 @@ const pieChartPlugins = {
         family: 'Raleway'
       }
     },
-    // tooltip: {
-    //   rtl: true,
-    // },
     title: {
       color: 'white',
       display: true,

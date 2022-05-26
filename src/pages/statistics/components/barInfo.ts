@@ -23,45 +23,56 @@ export const barInfo = {
   ]
 }
 
-export const barOptions: any = {
-  aspectRatio: 4, 
-  layout: {
-    padding: 10
-  },
-  elements: {},
-  scales:{
-    x: {
-      stacked: false
+export const barOptions = (isDark: boolean): any => {
+  return {
+    aspectRatio: 4, 
+    layout: {
+      padding: 10
     },
-    y: {
-      // stacked: true,
-      
-    },
-  },
-  plugins: {
-    datalabels: {
-      display: false,
-      padding: 10,
-      formatter: (value: any) => {
-        return ''
+    elements: {},
+    scales: {
+      x: {
+        grid: {
+          color: isDark ? "#4D4D4D" : '#cacaca'
+        }
       },
-    },
-    title: {
-      fullSize: true,
-      color: 'red'
-    },
-    
-    legend: {
-      display: false,
-      position: 'top',
-      align: 'end',
-      labels: {
-        usePointStyle: true,
-        boxWidth: 16,
-        boxHeight: 16,
-        boxPadding: 10
+      y: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 20,
+          callback: (label: any) => {
+            return `${label} % -`
+          },
+        },
+        grid: {
+          color: isDark ? "#4D4D4D" : '#cacaca'
+        }
       }
     },
-  },
-
+    plugins: {
+      datalabels: {
+        display: false,
+        padding: 10,
+        formatter: (value: any) => {
+          return ''
+        },
+      },
+      title: {
+        fullSize: true,
+        color: 'red'
+      },
+      
+      legend: {
+        display: false,
+        position: 'top',
+        align: 'end',
+        labels: {
+          usePointStyle: true,
+          boxWidth: 16,
+          boxHeight: 16,
+          boxPadding: 10
+        }
+      },
+    },
+  }
 }

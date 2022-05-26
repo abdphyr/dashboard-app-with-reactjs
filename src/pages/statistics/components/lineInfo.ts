@@ -25,42 +25,47 @@ export const lineData = {
   ]
 }
 
-export const lineOptions = {
-  aspectRatio: 6,
-  responsive: true,
-  maintainAspectRatio: true, 
-  plugins: {
-    legend: {
-      display: false
-    }
-  },
-  line: {
-    datasets: {
-      tension: 0
-    }
-  },
-  scales: {
-    x: {
-      title: {
-
+export const lineOptions = (isDark: boolean) => {
+  return {
+    aspectRatio: 6,
+    scales: {
+      x: {
+        grid: {
+          color: isDark ? "#4D4D4D" : '#cacaca'
+        }
       },
-      ticks: {
-        stepSize: 10
+      y: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 1.5,
+          callback: (label: any) => {
+            return `${label}-`
+          },
+        },
+        grid: {
+          color: isDark ? "#4D4D4D" : '#cacaca'
+        }
       }
     },
-    y: {
-      ticks: {
-        stepSize: 1.5,
-        min: 0
+    responsive: true,
+    maintainAspectRatio: true, 
+    plugins: {
+      legend: {
+        display: false
       }
-    },
-  },
-  elements: {
-    point: {
-      radius: 1
     },
     line: {
-      tension: 0.5,
+      datasets: {
+        tension: 0
+      }
+    },
+    elements: {
+      point: {
+        radius: 1
+      },
+      line: {
+        tension: 0.5,
+      }
     }
   }
 }

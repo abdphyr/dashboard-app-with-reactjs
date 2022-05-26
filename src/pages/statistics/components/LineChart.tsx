@@ -69,20 +69,7 @@ const LineChart: FC = () => {
         </ToolsSC>
       </LnChartInfoSC>
       <ChartSC>
-        <Line data={lineD} options={{
-          ...lineOptions, scales: {
-            x: {
-              grid: {
-                color: isDark ? "#4D4D4D" : '#cacaca'
-              }
-            },
-            y: {
-              grid: {
-                color: isDark ? "#4D4D4D" : '#cacaca'
-              }
-            }
-          }
-        }} />
+        <Line data={lineD} options={lineOptions(isDark)} />
       </ChartSC>
     </LineChartSC>
   );

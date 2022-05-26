@@ -41,27 +41,7 @@ const BarChart: FC = () => {
         </InfoSC>
       </InfoBarChartSC>
       <ChartSC>
-        <Bar data={barInfo} plugins={[ChartDataLabels]} options={{
-          ...barOptions, scales: {
-            x: {
-              grid: {
-                color: isDark ? "#4D4D4D" : '#cacaca'
-              }
-            },
-            y: {
-              beginAtZero: true,
-              ticks: {
-                stepSize: 20,
-                callback: (label: any) => {
-                  return `${label} % -`
-                },
-              },
-              grid: {
-                color: isDark ? "#4D4D4D" : '#cacaca'
-              }
-            }
-          }
-        }} />
+        <Bar data={barInfo} plugins={[ChartDataLabels]} options={barOptions(isDark)} />
       </ChartSC>
     </BarChartSC>
   );
