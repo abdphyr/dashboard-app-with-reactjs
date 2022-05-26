@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { search, profImage } from '../../images';
 import { useGetTheme } from '../../ThemeContextProvider';
 import { IconButton } from '@mui/material';
-import ProfIcon from '../../customSVGIcons/ProfIcon';
+import { ProfIcon } from '../../customSVGIcons';
 import { NotificationIcon } from '../../customSVGIcons';
 
 const NavBar: FC = () => {
