@@ -1,6 +1,6 @@
-import { HomeIcon, TableIcon, UsersIcon, MessagesIcon } from '../../icons';
-import { PlayerIcon, StatisticsIcon, SettingsIcon } from '../../icons';
-import { CustomIcon } from '../../icons/type';
+import { HomeIcon, TableIcon, UsersIcon, MessagesIcon } from '../../customSVGIcons';
+import { PlayerIcon, StatisticsIcon, SettingsIcon } from '../../customSVGIcons';
+import { CustomIcon } from '../../customSVGIcons/type';
 
 interface SDB {
   path: string;

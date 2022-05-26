@@ -2,7 +2,7 @@ import { FC, Dispatch, SetStateAction } from 'react';
 import { IconButton } from '@mui/material';
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom';
-import { CustomIcon } from '../../../icons/type';
+import { CustomIcon } from '../../../customSVGIcons/type';
 
 interface ISideBarProps {
   tab: number;
