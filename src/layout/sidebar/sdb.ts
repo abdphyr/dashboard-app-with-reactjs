@@ -1,47 +1,39 @@
-import { home, table, users, messages, player, statistics, settings } from '../../images';
-import { homeActive, tableActive, usersActive, messagesActive } from '../../images'
-import { playerActive, statisticsActive, settingsActive } from '../../images';
+import { HomeIcon, TableIcon, UsersIcon, MessagesIcon } from '../../icons';
+import { PlayerIcon, StatisticsIcon, SettingsIcon } from '../../icons';
+import { CustomIcon } from '../../icons/type';
 
 interface SDB {
   path: string;
-  image: string;
-  imageActive: string;
+  Icon: CustomIcon;
 }
 
 export const sdb: SDB[] = [
   {
     path: '/',
-    image: home,
-    imageActive: homeActive
+    Icon: HomeIcon
   },
   {
     path: '/table',
-    image: table,
-    imageActive: tableActive
+    Icon: TableIcon
   },
   {
     path: '/users',
-    image: users,
-    imageActive: usersActive
+    Icon: UsersIcon
   },
   {
     path: '/messages',
-    image: messages,
-    imageActive: messagesActive
+    Icon: MessagesIcon
   },
   {
     path: '/player',
-    image: player,
-    imageActive: playerActive
+    Icon: PlayerIcon
   },
   {
     path: '/statistics',
-    image: statistics,
-    imageActive: statisticsActive
+    Icon: StatisticsIcon
   },
   {
     path: '/settings',
-    image: settings,
-    imageActive: settingsActive
+    Icon: SettingsIcon
   },
 ]

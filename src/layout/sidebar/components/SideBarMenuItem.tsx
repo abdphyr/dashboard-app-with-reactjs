@@ -2,20 +2,20 @@ import { FC, Dispatch, SetStateAction } from 'react';
 import { IconButton } from '@mui/material';
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom';
+import { CustomIcon } from '../../../icons/type';
 
 interface ISideBarProps {
   tab: number;
   setTab: Dispatch<SetStateAction<number>>;
   tb: number;
   path: string;
-  image: string;
-  imageActive: string;
+  Icon: CustomIcon;
 }
 
 
 const SideBarMenuItem: FC<ISideBarProps> = (props) => {
   const { tab, setTab, tb } = props
-  const { path, image, imageActive } = props
+  const { path, Icon } = props
   const navigate = useNavigate()
   return (
     <SideBarMenuItemSC>
@@ -23,9 +23,7 @@ const SideBarMenuItem: FC<ISideBarProps> = (props) => {
         setTab(tb)
         navigate(path)
       }}>
-        <div>
-          <img src={tab === tb ? imageActive : image} alt="Image" />
-        </div>
+        <Icon active={tab === tb}/>
       </IconButton>
     </SideBarMenuItemSC>
   );

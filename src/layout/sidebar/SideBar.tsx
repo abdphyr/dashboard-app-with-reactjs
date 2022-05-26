@@ -29,8 +29,9 @@ const Sidebar: FC = () => {
         {sdb.map((sdbItem, index) => (
           <SideBarMenuItem
             tab={tab} tb={index} setTab={setTab}
-            path={sdbItem.path} image={sdbItem.image}
-            imageActive={sdbItem.imageActive} key={index}
+            path={sdbItem.path} 
+            Icon={sdbItem.Icon}
+            key={index}
           />
         ))}
         <SideBarMenuLenSC tab={tab} />
