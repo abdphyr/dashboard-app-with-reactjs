@@ -49,6 +49,13 @@ const BarChart: FC = () => {
               }
             },
             y: {
+              beginAtZero: true,
+              ticks: {
+                stepSize: 20,
+                callback: (label: any) => {
+                  return `${label} % -`
+                },
+              },
               grid: {
                 color: isDark ? "#4D4D4D" : '#cacaca'
               }

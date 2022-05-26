@@ -35,17 +35,7 @@ export const barOptions: any = {
     },
     y: {
       // stacked: true,
-      beginAtZero: true,
-      ticks: {
-       stepSize: 20,
-       callback: (label: any) => {
-         return `${label} % -`
-       },
-       textStrokeColor: 'red'
-      //  font: {
-      //   style:  
-      //  }
-      }
+      
     },
   },
   plugins: {
