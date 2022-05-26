@@ -4,7 +4,8 @@ import { Line } from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import styled from 'styled-components';
 import { lineOptions, lineData } from './lineInfo';
-import { profOpener } from '../../../images';
+// import { profOpener } from '../../../images';
+import { ProfIcon } from '../../../customSVGIcons'
 import { useGetTheme } from '../../../ThemeContextProvider';
 
 ChartJS.register(
@@ -43,7 +44,7 @@ const LineChart: FC = () => {
               31/01/2020 – 06/02/2020
             </div>
             <span>
-              <img src={profOpener} alt="Image" />
+              <ProfIcon isDark={isDark} />
             </span>
           </SelectSC>
           <CheckBoxLineSC isDark={isDark}>

@@ -1,9 +1,10 @@
 import { FC, useState } from 'react';
 import styled from 'styled-components';
-import { search, notif, notifDark, profImage } from '../../images';
+import { search, profImage } from '../../images';
 import { useGetTheme } from '../../ThemeContextProvider';
 import { IconButton } from '@mui/material';
-import ProfIcon from './components/ProfIcon';
+import ProfIcon from '../../customSVGIcons/ProfIcon';
+import { NotificationIcon } from '../../customSVGIcons';
 
 const NavBar: FC = () => {
   const [text, setText] = useState('')
@@ -25,7 +26,7 @@ const NavBar: FC = () => {
         </TextFieldSC>
         <NotificationSC>
           <IconButton>
-            <img src={isDark ? notifDark : notif} alt="Image" />
+            <NotificationIcon isDark={isDark} />
           </IconButton>
         </NotificationSC>
       </LeftNavSC>
@@ -92,6 +93,7 @@ const InputSC = styled('input') <{ isDark: boolean }>`
   background: ${p => p.isDark ? "#282C31" : "#FDFDFF"};
   color: ${p => p.isDark ? "#CACACA" : "#4F4F4F"};
   transition: all 0.3s ease;
+  padding: 6px 0;
   &:focus{
     border: none;
     outline: none;
